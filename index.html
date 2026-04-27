@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake — Neon Edition</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="game-wrapper">
+
+  <h1 class="game-title">Snake</h1>
+
+  <!-- HUD -->
+  <div class="hud">
+    <div class="hud-panel">
+      <span class="hud-label">Score</span>
+      <span class="hud-value" id="score">0</span>
+    </div>
+    <div class="hud-panel accent">
+      <span class="hud-label">Best</span>
+      <span class="hud-value" id="highscore">0</span>
+    </div>
+    <div class="hud-panel danger">
+      <span class="hud-label">Level</span>
+      <span class="hud-value" id="level">1</span>
+    </div>
+  </div>
+
+  <!-- Canvas -->
+  <div class="canvas-wrapper">
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Overlay (start / game-over) -->
+    <div id="overlay">
+      <div id="overlay-title">SNAKE</div>
+      <div id="overlay-sub">Arrow keys or WASD to move</div>
+      <div id="overlay-score"></div>
+      <button id="overlay-btn">▶ Start Game</button>
+    </div>
+  </div>
+
+  <p class="hint">Arrow keys / WASD &nbsp;·&nbsp; R to restart</p>
+
+</div>
+
+<!-- Load modules in dependency order -->
+<script src="js/config.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/snake.js"></script>
+<script src="js/food.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/hud.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</html>
